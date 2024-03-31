@@ -16,13 +16,18 @@ function addNewEmployee(event){
   <td id="tableID">${idNumbertext}</td>
   <td id="tableJob"> ${jobTitletext}</td>
   <td id="tableAnnual">${annualSalarytext}</td>
+  <td><button onclick="deleteEmployee(event)">␡</button</td>
 </tr>`
 
 //test to see if the code is working
-    console.log('firstName test',firstNametext)
-    console.log('lastName test',lastNametext)
-    console.log('idNumber test',idNumbertext)
-    console.log('jobTitle test',jobTitletext)
-    console.log('annualSalary test',annualSalarytext)
+    console.log('firstName',firstNametext)
+    console.log('lastName',lastNametext)
+    console.log('idNumber',idNumbertext)
+    console.log('jobTitle ',jobTitletext)
+    console.log('annualSalary',annualSalarytext)
 }
-
+function deleteEmployee(event){
+    console.log('Deleting',event.target)
+    const toDelete=event.target
+    toDelete.parentElement.parentElement.remove()
+}
