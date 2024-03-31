@@ -1,11 +1,13 @@
+//test if js pops up
+console.log('JS');
 function addNewEmployee(event){
-    event.prevent()
+    event.preventDefault()
 //Text Input
-    let firstNametext= document.getElementById("firstNameInput").value
-    let lastNametext= document.getElementById("lastNameInput").value
-    let idNumbertext= document.getElementById("idNumberInput").value
-    let jobTitletext= document.getElementById("jobTitleInput").value
-    let annualSalarytext= document.getElementById("annualSalaryInput").value
+    let firstNametext= document.getElementById("firstName").value
+    let lastNametext= document.getElementById("lastName").value
+    let idNumbertext= document.getElementById("idNumber").value
+    let jobTitletext= document.getElementById("jobTitle").value
+    let annualSalarytext= document.getElementById("annualSalary").value
     let tableBody = document.getElementById('tableBody')
 //Table Data
     tableBody.innerHTML += `<tr>
@@ -16,6 +18,7 @@ function addNewEmployee(event){
   <td id="tableAnnual">${annualSalarytext}</td>
 </tr>`
 
+//test to see if the code is working
     console.log('firstName test',firstNametext)
     console.log('lastName test',lastNametext)
     console.log('idNumber test',idNumbertext)

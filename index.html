@@ -12,6 +12,41 @@
   </header>
   <main>
     <h2>Add Employee</h2>
+    <form>
+      <input 
+        data-testid="firstNameInput"
+        id="firstName"
+        placeholder="First Name"
+        type="text"
+        />
+      <input
+        data-testid="lastNameInput"
+        id="lastName"
+        placeholder="Last Name"
+        type="text"
+        />
+        <input 
+        data-testid="idNumberInput"
+        id="idNumber"
+        placeholder="ID number"
+        type="text"
+        />
+      <input
+        data-testid="jobTitleInput"
+        id="jobTitle"
+        placeholder="Job Title"
+        type="text"
+        />
+        <input 
+        data-testid="annualSalaryInput"
+        id="annualSalary"
+        placeholder="Annual Salary"
+        type="text"
+        />
+        <button data-testid="submitButton" onclick="addNewEmployee(event)">Submit</button>
+    </form>
+
+    <h2>Employees</h2>
     <table>
       <thead>
         <tr>
@@ -25,32 +60,6 @@
       <tbody id="tableBody">
       </tbody>
     </table> 
-    <form>
-      <input 
-        id="firstNameInput"
-        placeholder="First Name"
-        type="text">
-      <input
-        id="lastNameInput"
-        placeholder="Last Name"
-        type="text">
-        <input 
-        id="idNumberInput"
-        placeholder="ID number"
-        type="text">
-      <input
-        id="jobTitleInput"
-        placeholder="Job Title"
-        type="text">
-        <input 
-        id="annualSalaryInput"
-        placeholder="Annual Salary"
-        type="text">
-        
-      <button onclick="addNewEmployee(event)">Submit</button>
-    </form>
-
-    <h2>Employees</h2>
   </main>
   <footer>
     <p>Total Monthly</p>
