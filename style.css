@@ -1,7 +1,27 @@
 body {
-    background-color: #dcdcdc;
+    background-color:lightsalmon;
     font-family: 'Roboto', sans-serif;
     color: #313131;
     font-size: 1.25em;
   }
-  
+  h1,h2{
+    text-align: center;
+  }
+  table{
+    background-color:gold;
+    text-align: center;
+    border:solid,black;
+  }
+  th{
+    padding: 0 26px;
+  }
+  tr{
+    background-color: black;
+    color: white;
+  }
+p{
+  background-color: rgb(130, 60, 17);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
+}
