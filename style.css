@@ -25,3 +25,7 @@ p{
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
 }
+.over-budget {
+  color: red;
+  
+}

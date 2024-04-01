@@ -1,5 +1,7 @@
 //test if js pops up
 console.log('JS');
+
+let totalMonthlyCost=0;
 function addNewEmployee(event){
     event.preventDefault()
 //Text Input
@@ -9,6 +11,8 @@ function addNewEmployee(event){
     let jobTitletext= document.getElementById("jobTitle").value
     let annualSalarytext= document.getElementById("annualSalary").value
     let tableBody = document.getElementById('tableBody')
+    let annualSalary = parseFloat(document.getElementById("annualSalary").value);
+
 //Table Data
     tableBody.innerHTML += `<tr>
   <td id="tableFirst">${firstNametext}</td>
@@ -18,8 +22,8 @@ function addNewEmployee(event){
   <td id="tableAnnual">${annualSalarytext}</td>
   <td><button onclick="deleteEmployee(event)">␡</button</td>
 </tr>`
-
-//test to see if the code is working
+totalMonthlyCost += annualSalary / 12;
+    updateTotalMonthlyCost();
     console.log('firstName',firstNametext)
     console.log('lastName',lastNametext)
     console.log('idNumber',idNumbertext)
@@ -30,4 +34,20 @@ function deleteEmployee(event){
     console.log('Deleting',event.target)
     const toDelete=event.target
     toDelete.parentElement.parentElement.remove()
+    let row = event.target.closest('tr');
+    let annualSalary = parseFloat(row.querySelector('#tableAnnual').textContent);
+    totalMonthlyCost -= annualSalary / 12;
+    row.remove();
+    updateTotalMonthlyCost()
+}
+function updateTotalMonthlyCost() {
+    let totalMonthlyCostElement = document.getElementById("totalMonthlyCost");
+    totalMonthlyCostElement.textContent = "Total Monthly Cost: $" + totalMonthlyCost.toFixed(2);
+    let footer = document.getElementById("footer");
+
+    if (totalMonthlyCost > 20000) {
+        totalMonthlyCostElement.style.color = "red";
+    } else {
+        totalMonthlyCostElement.style.color = ""; 
+    }
 }
